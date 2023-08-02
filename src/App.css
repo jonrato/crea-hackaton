@@ -1,0 +1,56 @@
+html {
+  font-size: 16px; /* Define o tamanho de fonte base */
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-section {
+  /* flex: 1; */
+  width: 50vw;
+  padding: 2rem; /* Utilizando rem para o padding */
+}
+
+.right-section {
+  /* flex: 1; */
+  width: 50vw;
+  background-color: rgba(0,0,128,0.8);
+}
+
+.right-section img {
+  max-width: 12rem; /* Utilizando rem para o tamanho da imagem */
+}
+
+.line {
+  width: 70%;
+  height: 1px;
+  background-color: rgba(153, 153, 163, 0.8);
+  margin: 3rem 0;
+}
+
+/* Estilo para o botão estilizado com o logo do Google */
+.google-button {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #DB4437!important; /* Cor de fundo do Google (vermelho) */
+  color: #fff!important; /* Cor do texto (branco) */
+  border: none!important; /* Removendo as bordas padrão do botão */
+  border-radius: 4px; /* Adicionando um leve arredondamento às bordas */
+  cursor: pointer!important;
+  transition: background-color 0.3s!important; /* Efeito de transição ao passar o mouse */
+}
+
+/* Estilo para o ícone do Google dentro do botão */
+.google-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Efeito de hover no botão */
+.google-button:hover {
+  background-color: #E74B3B!important; /* Cor de fundo alterada ao passar o mouse */
+}
