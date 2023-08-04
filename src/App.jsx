@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import ARTs from "./pages/dashboard/ARTs";
+import NovaARTStep from "./components/FormStep/NovaART/NovaARTStep";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/register" element={<Register/>} />
             <Route exact path="/dashboard" element={<Dashboard/>}/>
             <Route exact path="/arts" element={<ARTs/>}/>
+            <Route exact path="/novaart" element={<NovaARTStep/>}/>
           </Routes>
         </Router>
       </div>
