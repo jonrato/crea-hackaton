@@ -55,3 +55,34 @@ html {
 .google-button:hover {
   background-color: #E74B3B!important; /* Cor de fundo alterada ao passar o mouse */
 }
+
+/* Estilos para o Sidebar minimizado */
+/* .sidebar.minimized {
+  width: 60px;
+}
+
+/* Botão de expandir/minimizar */
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  cursor: pointer;
+  color: white;
+} 
+
+.sidebar-container {
+  position: relative;
+  display: flex;
+}
+
+.toggle-button {
+  position: absolute;
+  right: 70%; /* Ajuste a distância desejada do botão em relação ao Sidebar */
+  top: 20%;
+  transform: translateY(-50%);
+  background-color: #004d8e;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}

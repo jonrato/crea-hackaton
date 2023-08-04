@@ -17,6 +17,7 @@ const Sidebar = ({ handlePageChange }) => {
         {icon: iconatendimentos, text: 'Atendimento Online', page: 'Atendimento Online' },
         {icon: iconmanutencao, text: 'Manutenção do Registro CREASP', page: 'Atendimento Online' },
     ];
+    
   return (
     <div className="sidebar bg-warning sidebar-shadow">
       <div className="d-flex flex-column align-items-center justify-content-center" style={{ padding: '20px 0' }}>

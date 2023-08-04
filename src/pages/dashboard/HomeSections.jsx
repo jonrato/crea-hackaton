@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
@@ -7,7 +8,7 @@ import icatendimentos from "../../images/ic-atendimentos.png";
 import icmanutencao from "../../images/ic-manutencao.png";
 import icservicos from "../../images/ic-servicos.png";
 import icsolicitacoes from "../../images/ic-solicitacoes.png";
-const HomeSections = () => {
+const HomeSections = ({ handlePageChange }) => {
   return (
     <div className='home-sections d-flex align-items-center justify-content-center'>
       <Container fluid>
@@ -27,7 +28,11 @@ const HomeSections = () => {
             </Card>
           </Col>
           <Col style={{width:'23vw'}}>
-          <Card className="rounded d-flex align-items-center justify-content-center" style={{ border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}>
+          <Card 
+          className="rounded d-flex align-items-center justify-content-center" 
+          style={{ border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}
+          onClick={() => handlePageChange('ARTs')}
+          >
               <Card.Title>
                 <img src={icarts} />
               </Card.Title>

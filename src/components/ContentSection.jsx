@@ -5,14 +5,14 @@ import { Container, Row, Col } from 'react-bootstrap';
 import HomeSections from '../pages/dashboard/HomeSections';
 import ARTs from '../pages/dashboard/ARTs';
 
-const ContentSection = ({ currentPage }) => {
+const ContentSection = ({ currentPage, handlePageChange }) => {
   return (
     <div className="content-section d-flex align-items-center justify-content-center" style={{ width: '100%', height: '90%' }}>
       {currentPage === 'Home' && (
         <Container fluid>
           <Row className='justify-content-center' style={{ marginTop: '2rem' }}>
             <Col md={7}>
-              <HomeSections />
+              <HomeSections handlePageChange={handlePageChange} />
             </Col>
           </Row>
         </Container>
