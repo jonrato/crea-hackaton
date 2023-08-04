@@ -98,56 +98,60 @@ const SearchModal = ({ show, handleClose }) => {
             </Table>
           ) : (
             <Form onSubmit={handleSubmit}>
-              <Row>
+            <Row>
                 <Form.Group className="col-6">
-                  <Form.Label>Nº de Registro</Form.Label>
-                  <Form.Control
+                <Form.Label>Nº de Registro</Form.Label>
+                <Form.Control
                     type="text"
                     name="numeroRegistro"
                     value={formData.numeroRegistro}
                     onChange={handleChange}
-                  />
+                />
                 </Form.Group>
-  
+
                 <Form.Group className="col-6">
-                  <Form.Label>CNPJ</Form.Label>
-                  <Form.Control
+                <Form.Label>CNPJ</Form.Label>
+                <Form.Control
                     type="text"
                     name="cnpj"
                     value={formData.cnpj}
                     onChange={handleChange}
-                  />
+                />
                 </Form.Group>
-  
+
                 <Form.Group className="col-6">
-                  <Form.Label>Razão Social</Form.Label>
-                  <Form.Control
+                <Form.Label>Razão Social</Form.Label>
+                <Form.Control
                     type="text"
                     name="razaoSocial"
                     value={formData.razaoSocial}
                     onChange={handleChange}
-                  />
+                />
                 </Form.Group>
-  
+
                 <Form.Group className="col-6">
-                  <Form.Label>Nome Fantasia</Form.Label>
-                  <Form.Control
+                <Form.Label>Nome Fantasia</Form.Label>
+                <Form.Control
                     type="text"
                     name="nomeFantasia"
                     value={formData.nomeFantasia}
                     onChange={handleChange}
-                  />
+                />
                 </Form.Group>
-              </Row>
-              <Row className="justify-content-end mt-3">
-                <Button className="mr-2" variant="primary" type="submit">
-                  Buscar
+            </Row>
+
+            <Row className="justify-content-center mt-3">
+                <div className="text-center">
+                <Button className="mr-2" variant="primary" type="submit" style={{ width: '100px', margin:'1rem' }}>
+                    Buscar
                 </Button>
-                <Button variant="secondary" onClick={handleClear}>
-                  Limpar
+                <Button variant="secondary" onClick={handleClear} style={{ width: '100px', margin:'1rem' }}>
+                    Limpar
                 </Button>
-              </Row>
+                </div>
+            </Row>
             </Form>
+
           )}
         </Modal.Body>
         <Modal.Footer>

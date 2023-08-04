@@ -10,7 +10,7 @@ const StepTwo = () => {
       </h5>
       <Row>
 
-        <Form.Group as={Row} className='align-items-center col-6'>
+        <Form.Group as={Row} className='align-items-center col-6' style={{marginLeft:'0.1rem'}}>
             <Form.Check type="radio" label="Pessoa Física" name="contratanteType" value="Pessoa Física" />
             <Form.Check type="radio" label="Pessoa Física Estrangeira" name="contratanteType" value="Pessoa Física Estrangeira" />
             <Form.Check type="radio" label="Pessoa Jurídica de Direito Privado" name="contratanteType" value="Pessoa Jurídica de Direito Privado" />
