@@ -3,6 +3,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import HomeSections from '../pages/dashboard/HomeSections';
+import ARTs from '../pages/dashboard/ARTs';
 
 const ContentSection = ({ currentPage }) => {
   return (
@@ -27,17 +28,18 @@ const ContentSection = ({ currentPage }) => {
             </Col>
             {/* Adicione os outros dois cards aqui */}
           </Row>
-
-          {/* Segunda linha de cards */}
+        </Container>
+      )}
+      {currentPage === 'ARTs' && (
+        <Container fluid>
+          <h5>Aqui</h5>
           <Row className='justify-content-center' style={{ marginTop: '2rem' }}>
             <Col md={4}>
-              {/* Adicione o outro card aqui */}
+              <ARTs />
             </Col>
-            {/* Adicione os outros dois cards aqui */}
           </Row>
         </Container>
       )}
-      {currentPage === 'ARTs' && <div>Conteúdo da página Contato</div>}
       {currentPage === 'Serviços' && <div>Conteúdo da página Serviços</div>}
       {currentPage === 'Atendimento Online' && <div>Conteúdo da página Configurações</div>}
       {/* Conteúdos das outras páginas aqui */}

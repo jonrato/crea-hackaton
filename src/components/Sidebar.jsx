@@ -12,7 +12,7 @@ const Sidebar = ({ handlePageChange }) => {
     const navButtons = [
         {icon: iconanuidade, text: 'Home', page: 'Home' },
         {icon: iconanuidade, text: 'Anuidade', page: 'Anuidade' },
-        {icon: iconarts, text: 'A.R.T.s', page: 'ARTs' },
+        {icon: iconarts, text: 'ARTs', page: 'ARTs' },
         {icon: iconservicos, text: 'Serviços', page: 'Serviços' },
         {icon: iconatendimentos, text: 'Atendimento Online', page: 'Atendimento Online' },
         {icon: iconmanutencao, text: 'Manutenção do Registro CREASP', page: 'Atendimento Online' },
