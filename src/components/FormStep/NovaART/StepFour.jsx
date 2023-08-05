@@ -24,15 +24,15 @@ const StepFour = () => {
 
     
     }
-    async function listarArte() {
+    async function listarArt() {
         try{
             const data = await getDocs(ref);
             const filteredData = data.docs.map((doc) => ({
                 ...doc.data(),
                 id: doc.id,
             }));
-            console.log("en")
-            console.log(filteredData)
+            alert(filteredData);
+            console.log(filteredData);
         }catch(e){console.log(e)}
     }
     function adicionarArt(e){
@@ -53,7 +53,7 @@ const StepFour = () => {
     return (
         <div style={{ border: '1px solid #ccc', borderRadius: '5px', padding: '10px' }}><br></br><br></br>
             <button onClick={adicionarArt} style={{backgroundColor:'blue',color:'white'}}> Enviar </button> 
-            <button onClick={listarArte} style={{backgroundColor:'blue',color:'white'}}> Listar </button>            
+            <button onClick={listarArt} style={{backgroundColor:'blue',color:'white'}}> Listar </button>            
         </div>)
 
 }
