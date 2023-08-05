@@ -38,6 +38,7 @@ const RightRegister = () => {
               console.log(resultado);
               if(JSON.stringify(resultado) != null){
                 alert("Usuário cadastrado com sucesso." + JSON.stringify(resultado));
+                addDoc(ref, { "Nome": nome, "Email" : email, "Usuario": user, json:  JSON.stringify(resultado)});
               }else{
                 alert("Usuário já cadastrado ou erro." + error);
               }
@@ -45,10 +46,10 @@ const RightRegister = () => {
     
         });
             //DADO A SER INSERIDO NO BANCO DE DADOS - AQUI PRECISA SER ADICIONADO O OBJETO;
-            addDoc(ref, { "Nome": nome, "Email" : email, "user": user });
+            
             console.log("Usuario "+user+" Cadastrado com sucesso.");
         }catch(error){
-            alert("Usuário já cadastrado ou erro." + error);
+            alert("Usuário já cadastrado ou erro." + error);  
         }
       } 
 

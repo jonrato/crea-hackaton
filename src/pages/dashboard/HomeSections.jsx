@@ -8,6 +8,8 @@ import icatendimentos from "../../images/ic-atendimentos.png";
 import icmanutencao from "../../images/ic-manutencao.png";
 import icservicos from "../../images/ic-servicos.png";
 import icsolicitacoes from "../../images/ic-solicitacoes.png";
+
+
 const HomeSections = ({ handlePageChange }) => {
   return (
     <div className='home-sections d-flex align-items-center justify-content-center'>
@@ -101,6 +103,9 @@ const HomeSections = ({ handlePageChange }) => {
             </Card>
           </Col>
         </Row>
+
+        <a href="#" class="botao flutuante" id="flutuante"><i class="icon icon-upload"></i> Ajuda </a> 
+
       </Container>
     </div>
   );
