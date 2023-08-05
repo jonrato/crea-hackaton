@@ -7,25 +7,57 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 //import auth from '../firebase'
 //import googleProvider from "../firebase";
 import { useState } from 'react';
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { addDoc, collection, getDocs
+} from "firebase/firestore";
 const RightRegister = () => {
 
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
   const [user, setUser] = useState("");
   const [senha, setSenha] = useState("");
 
     const [
-      signInWithEmailAndPassword,
-          usuarioLogado,
-          loading,
-          error
-      ] = useSignInWithEmailAndPassword(auth); 
+      createUserWithEmailAndPassword,
+      usuarioLogado,
+      loading,
+      error
+  ] = useCreateUserWithEmailAndPassword(auth);    
+
+      function adicionarArt(e){
+
+        // Bloquear o recarregamento da página
+        e.preventDefault();
+
+
+        try{
+            const ref = collection(db, "User")
+            //CADASTRAR
+            createUserWithEmailAndPassword(user+"@creasp.com", senha).then((resultado) => {
+              console.log(resultado);
+              if(JSON.stringify(resultado) != null){
+                alert("Usuário cadastrado com sucesso." + JSON.stringify(resultado));
+              }else{
+                alert("Usuário já cadastrado ou erro." + error);
+              }
+
+    
+        });
+            //DADO A SER INSERIDO NO BANCO DE DADOS - AQUI PRECISA SER ADICIONADO O OBJETO;
+            addDoc(ref, { "Nome": nome, "Email" : email, "user": user });
+            console.log("Usuario "+user+" Cadastrado com sucesso.");
+        }catch(error){
+            alert("Usuário já cadastrado ou erro." + error);
+        }
+      } 
 
       function entrar(e){
         e.preventDefault();
         signInWithEmailAndPassword(user+"@creasp.com", senha).then((resultado) => {
           setUser(resultado.user);
           console.log(resultado);
-          alert("entrou" + JSON.stringify(resultado));
+          alert("Usuário já cadastrado ou erro." + JSON.stringify(resultado));
 
     })
 
@@ -35,33 +67,27 @@ const RightRegister = () => {
         <h5>LOGIN</h5>
       <Form className="mt-4 col-md-6">
         <Form.Group>
-          <Form.Label>Nome</Form.Label>
-          <Form.Control onChange={e => setUser(e.target.value)} id="user" name="user" type="text" placeholder="Digite o número do seu CREA" />
+          <Form.Label>Nome </Form.Label>
+          <Form.Control onChange={e => setNome(e.target.value)} id="nome" name="nome" type="text" placeholder="Digite seu nome" />
         </Form.Group>
 
         <Form.Group>
           <Form.Label>Email</Form.Label>
-          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite seu CPF" />
+          <Form.Control onChange={e => setEmail(e.target.value)} id="email" name="email" type="text" placeholder="Digite seu email" />
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>Email</Form.Label>
-          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite seu CPF" />
+          <Form.Label>CREA ou CPF</Form.Label>
+          <Form.Control onChange={e => setUser(e.target.value)} id="user" name="user" type="text" placeholder="Digite seu CPF" />
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>CPF</Form.Label>
-          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite seu CPF" />
+          <Form.Label>Senha</Form.Label>
+          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite sua Senha" />
         </Form.Group>
 
-        <Form.Group>
-          <Form.Label>CPF</Form.Label>
-          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite seu CPF" />
-        </Form.Group>
 
-        <a href="">
-        <small>Esqueci a senha</small>
-        </a>
+
         <Row className='d-flex align-items-center justify-content-center col-12'>
 
             <Button 
@@ -76,16 +102,16 @@ const RightRegister = () => {
               Voltar
             </Button>
             <Button
-            onClick={entrar}
+            onClick={adicionarArt}
             
             className='mt-3 col-4'
             style={{
                 backgroundColor:"rgba(0,0,128,0.8)",
                 border:'1px solid rgba(0,0,128,0.8)'
             }}
-            href="/register"
+            //href="/register"
             >
-              Continuar
+              Cadastrar
             </Button>
         </Row>
       </Form>
