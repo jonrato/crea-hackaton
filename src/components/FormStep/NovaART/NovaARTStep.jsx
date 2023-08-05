@@ -95,7 +95,7 @@ const NovaARTStep = () => {
             </Row>
             <div className='d-box justify-content-center'>
 
-              <ProgressBar now={(step / totalSteps) * 100} label={`${step} of ${totalSteps}`} />
+              <ProgressBar now={(step / totalSteps) * 100} label={`${step} de ${totalSteps}`} />
             </div>
 
             <Form onSubmit={handleSubmit}>
@@ -106,10 +106,10 @@ const NovaARTStep = () => {
 
               <div className="py-5 d-flex justify-content-between">
                 <Button variant="secondary" onClick={handlePreviousStep} disabled={step === 1}>
-                  Previous
+                  Voltar
                 </Button>
                 <Button variant="primary" onClick={handleNextStep} disabled={step === totalSteps}>
-                  Next
+                  Avançar
                 </Button>
               </div>
             </Form>

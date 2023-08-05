@@ -105,17 +105,19 @@ const ContentARTs = () => {
                     </Card>
                 </Col>
                 <Col style={{width:'23vw'}}>
-                <Card className="rounded d-flex align-items-center justify-content-center" style={{ border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}>
-                    <Card.Title>
-                        <img src={artObra} />
-                    </Card.Title>
-                    <Card.Subtitle>
-                        Nova A.R.T
-                    </Card.Subtitle>
-                    <Card.Text className="col-6 text-center">
-                        Obra/Serviço
-                    </Card.Text>
+                <a href="/novaart">
+                    <Card className="rounded d-flex align-items-center justify-content-center" style={{ border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}>
+                        <Card.Title>
+                            <img src={artObra} />
+                        </Card.Title>
+                        <Card.Subtitle>
+                            Nova A.R.T
+                        </Card.Subtitle>
+                        <Card.Text className="col-6 text-center">
+                            Obra/Serviço
+                        </Card.Text>
                     </Card>
+                </a>
                 </Col>
                 <Col style={{width:'23vw'}}>
                 <Card className="rounded d-flex align-items-center justify-content-center" style={{ border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}>

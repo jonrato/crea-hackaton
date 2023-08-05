@@ -28,11 +28,13 @@ const HomeSections = ({ handlePageChange }) => {
             </Card>
           </Col>
           <Col style={{width:'23vw'}}>
-          <Card 
-          className="rounded d-flex align-items-center justify-content-center" 
-          style={{ border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}
-          onClick={() => handlePageChange('ARTs')}
-          >
+          <a href="/arts">
+            <Card 
+            className="rounded d-flex align-items-center justify-content-center" 
+            style={{ border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}
+            onClick={() => handlePageChange('ARTs')}
+            >
+
               <Card.Title>
                 <img src={icarts} />
               </Card.Title>
@@ -43,6 +45,7 @@ const HomeSections = ({ handlePageChange }) => {
                 Consultas, Preenchimento, Personalização...
               </Card.Text>
             </Card>
+          </a>
           </Col>
           <Col style={{width:'23vw'}}>
           <Card className="rounded d-flex align-items-center justify-content-center" style={{ border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}>

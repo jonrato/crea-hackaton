@@ -137,14 +137,6 @@ const StepOne = () => {
             {/* Modal de Busca */}
             <SearchModal show={showModal} handleClose={handleCloseModal} />
             </div>
-            <div className='col-12 d-flex justify-content-end'>
-                <img className='col-6' src={helpGreen} style={{width:'5rem'}} />
-                <small className='col-3' style={{marginLeft:'1rem'}}><span style={{fontWeight:'bolder'}}>Pronto!</span> Todas as informações
-                    obrigatórias foram preenchidas
-                    Percorra os passos para conferir e
-                    então conclua, enviando sua A.R.T
-                </small>
-            </div>
         </Form.Group>
       );
 }
