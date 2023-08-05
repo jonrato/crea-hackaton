@@ -19,7 +19,8 @@ Tecnologias React + Vite
 
 <h3 align="center">Sobre</h3>
 
-<p align=""> O projeto tem objetivo melhorar a acessibilidade e diminuir o tempo que o usuário final demora para preencher o cadastro de ART. </p>
+<p align=""> - O projeto tem objetivo melhorar a acessibilidade e diminuir o tempo que o usuário final demora para preencher o cadastro de ART. </p>
+<p align=""> - . </p>
 
 
 <h3 align="center">Instalacao</h3>
@@ -41,6 +42,10 @@ Tecnologias React + Vite
 <p> - Integração com API do ChatGpt</p>
 
 
+<br></br>
+
  Devido ao prazo curto pensamos em uma solução robusta e que fosse desenvolvida em pouco tempo.
  55K requests 1 day
 https://ibb.co/SKHM44R
+
+Backend Branch Main/Firebase
