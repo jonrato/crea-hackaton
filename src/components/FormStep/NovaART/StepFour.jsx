@@ -1,13 +1,17 @@
 import { Button } from "react-bootstrap";
 import { db } from "../../../firebase";
+import React, { useState } from 'react';
 import { addDoc, collection, getDocs
 } from "firebase/firestore";
 
-
 const StepFour = () => {
     const ref = collection(db, "Art")
+    let [arts, setArts] = useState({
+        usuario: ""
+    });
+
+    const inputs = (e) => setArts({ ...arts, [e.target.name]: e.target.value});
     
-    //const inputs = (e) => setFormulario({ ...formulario, [e.target.name]: e.target.value});
     async function listarArt() {
         console.log(ref);
         const query = await collection(db, "Art");
@@ -43,7 +47,7 @@ const StepFour = () => {
 
         try{
             //DADO A SER INSERIDO NO BANCO DE DADOS - AQUI PRECISA SER ADICIONADO O OBJETO;
-            addDoc(ref, {"usuario:" : "test"});
+            addDoc(ref, {"usuario:" : arts});
             console.log("ART:Enviado");
 //console.log("->"+ JSON.stringify(ref) + JSON.stringify(db));
         }catch(error){
@@ -52,6 +56,7 @@ const StepFour = () => {
     } 
     return (
         <div style={{ border: '1px solid #ccc', borderRadius: '5px', padding: '10px' }}><br></br><br></br>
+            <input onChange={inputs} name="art" id="art" type="text" placeholder="Valor a ser adicionado no banco de dados"/>
             <button onClick={adicionarArt} style={{backgroundColor:'blue',color:'white'}}> Enviar </button> 
             <button onClick={listarArt} style={{backgroundColor:'blue',color:'white'}}> Listar </button>            
         </div>)
