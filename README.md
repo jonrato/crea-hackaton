@@ -37,7 +37,7 @@ Tecnologias React + Vite
 <h3 align="center">Tecnologias </h3>
 
 <p align="">  - ReactJs + Vite no FrontEnd</p>
-<p align=""> - Firebase no Backend </p>
+- Firebase no Backend 
 <p> - Integração com API do ChatGpt</p>
 
 
