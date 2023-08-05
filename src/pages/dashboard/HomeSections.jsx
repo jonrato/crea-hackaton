@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, {useState} from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import iconanuidade from "../../images/ic-anuidade.png";
 import icarts from "../../images/ic-arts.png";
@@ -8,9 +8,20 @@ import icatendimentos from "../../images/ic-atendimentos.png";
 import icmanutencao from "../../images/ic-manutencao.png";
 import icservicos from "../../images/ic-servicos.png";
 import icsolicitacoes from "../../images/ic-solicitacoes.png";
-
+import HelpModal from '../../components/HelpModal';
+import './Art.css';
 
 const HomeSections = ({ handlePageChange }) => {
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+      setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+      setShowModal(false);
+  };
   return (
     <div className='home-sections d-flex align-items-center justify-content-center'>
       <Container fluid>
@@ -103,9 +114,9 @@ const HomeSections = ({ handlePageChange }) => {
             </Card>
           </Col>
         </Row>
-
-        <a href="#" class="botao flutuante" id="flutuante"><i class="icon icon-upload"></i> Ajuda </a> 
-
+        <HelpModal show={showModal} handleClose={handleCloseModal} />
+        <a href="#" onClick={handleShowModal} className="botao flutuante" id="flutuante"><i className="icon icon-upload"></i> Ajuda </a> 
+        <button                > TEST </button>
       </Container>
     </div>
   );

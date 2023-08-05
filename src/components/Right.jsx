@@ -45,7 +45,7 @@ const RightSection = () => {
         <h5>LOGIN</h5>
       <Form className="mt-4 col-md-6">
         <Form.Group>
-          <Form.Label>CREA</Form.Label>
+          <Form.Label>CREA ou CPF</Form.Label>
           <Form.Control onChange={e => setUser(e.target.value)} id="user" name="user" type="text" placeholder="Digite o número do seu CREA" />
         </Form.Group>
 

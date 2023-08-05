@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from '../../components/Sidebar';
 import ContentARTs from './ContentARTs';
 import Header from '../../components/Header';
-import './Art.css'
+
 const ARTs = () => {
   const [currentPage, setCurrentPage] = useState('Home');
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);

@@ -84,7 +84,7 @@ const RightRegister = () => {
 
         <Form.Group>
           <Form.Label>Senha</Form.Label>
-          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite sua Senha" />
+          <Form.Control onChange={e => setSenha(e.target.value)} type="password" id="senha" name="senha"  placeholder="Digite sua Senha" />
         </Form.Group>
 
 
