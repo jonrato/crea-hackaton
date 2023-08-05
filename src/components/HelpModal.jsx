@@ -36,7 +36,7 @@ const HelpModal = ({ show, handleClose }) => {
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
-            messages: [{ role: "user", content: formData}],
+            messages: [{ role: "user", content: formData.input}],
             max_tokens: 24,
         })
     })
@@ -44,7 +44,7 @@ const HelpModal = ({ show, handleClose }) => {
     .then(response => response.json())
     //.then(response => console.log(response))
     //.then(data => setResposta(data.toString())) << remover codigo
-    .then(data => alert(data))
+    .then(data => alert(JSON.stringify(data)))
     //.then(data => console.log(JSON.parse(data).choices))
 
     .catch(error => {

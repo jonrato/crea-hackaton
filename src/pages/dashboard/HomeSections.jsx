@@ -116,7 +116,7 @@ const HomeSections = ({ handlePageChange }) => {
         </Row>
         <HelpModal show={showModal} handleClose={handleCloseModal} />
         <a href="#" onClick={handleShowModal} className="botao flutuante" id="flutuante"><i className="icon icon-upload"></i> Ajuda </a> 
-        <button                > TEST </button>
+
       </Container>
     </div>
   );
