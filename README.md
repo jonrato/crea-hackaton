@@ -15,18 +15,18 @@ Tecnologias React + Vite
      
 <!--te-->
 
-<h3 align="center">Sobre</h3>
+<h3 align="">Sobre</h3>
 
 <p align=""> - O projeto tem objetivo melhorar a acessibilidade e diminuir o tempo que o usuário final demora para preencher o cadastro de ART. </p>
 
 
-<h3 align="center">Instalacao</h3>
+<h3 align="">Instalacao</h3>
 
 <p align=""> - git clone https://github.com/jonrato/crea-hackaton.git  </p>
 <p align=""> - npm install </p>
 <p align=""> - npm run dev </p>
 
-<h3 align="center">Pre Requisitos</h3>
+<h3 align="">Pre Requisitos</h3>
 
 <p align=""> - Git + GitHub
 <p align=""> - Node Instalado
