@@ -22,6 +22,10 @@ const HomeSections = ({ handlePageChange }) => {
   const handleCloseModal = () => {
       setShowModal(false);
   };
+
+  function redirect(){
+    window.location.replace("/novaart");
+  }
   return (
     <div className='home-sections d-flex align-items-center justify-content-center'>
       <Container fluid>
@@ -41,9 +45,10 @@ const HomeSections = ({ handlePageChange }) => {
             </Card>
           </Col>
           <Col style={{width:'23vw'}}>
+            <div onClick={redirect}>
           <Card 
           className="rounded d-flex align-items-center justify-content-center" 
-          style={{ border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}
+          style={{ cursor: 'pointer', border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}
           onClick={() => handlePageChange('ARTs')}
           >
               <Card.Title>
@@ -55,12 +60,12 @@ const HomeSections = ({ handlePageChange }) => {
               <Card.Text className="col-6 text-center">
                 Consultas, Preenchimento, Personalização...
               </Card.Text>
-            </Card>
+            </Card></div>
           </Col>
           <Col style={{width:'23vw'}}>
           <Card className="rounded d-flex align-items-center justify-content-center" style={{ border: '2px solid #004D8E', backgroundColor: 'white', height: '30vh' }}>
               <Card.Title>
-                <img src={icservicos} />
+                <a href='' style={{cursor:'pointer'}}><img src={icservicos} /></a>
               </Card.Title>
               <Card.Subtitle>
                 Serviços

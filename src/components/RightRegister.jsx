@@ -39,6 +39,7 @@ const RightRegister = () => {
               if(JSON.stringify(resultado) != null){
                 alert("Usuário cadastrado com sucesso." + JSON.stringify(resultado));
                 addDoc(ref, { "Nome": nome, "Email" : email, "Usuario": user, json:  JSON.stringify(resultado)});
+                window.location.replace("/dashboard");
               }else{
                 alert("Usuário já cadastrado ou erro." + error);
               }
