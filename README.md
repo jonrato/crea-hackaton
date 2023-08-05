@@ -1,4 +1,4 @@
-# React + Vite
+# E9.ART
 
 # Install Dependencies:
 `npm install`
