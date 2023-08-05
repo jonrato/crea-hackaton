@@ -1,8 +1,8 @@
 
-<h1 align="center"> # E9.ART  </h1>
+<h1 align="center">  E9.ART  </h1>
 
 <h2 align="center">
-##Tecnologias React + Vite
+Tecnologias React + Vite
 </h2>
 
 
@@ -17,14 +17,14 @@
      
 <!--te-->
 
-<h3 align="center">##Sobre</h3>
+<h3 align="center">Sobre</h3>
 
 <p align="center"> O projeto tem objetivo melhorar a acessibilidade e diminuir o tempo que o usuário final demora para preencher o cadastro de ART. </p>
 <p align="center"> O projeto foi desenvolvido com:</p>
 <p align="center"> ReactJs no FrontEnd</p>
 <p align="center"> Firebase no Backend</p>
 
-<h3 align="center">##Instalacao</h3>
+<h3 align="center">Instalacao</h3>
 
 <p align="center"> - git clone  </p>
 <p align="center"> O projeto tem objetivo melhorar a acessibilidade e diminuir o tempo que o usuário final demora para preencher o cadastro de ART. </p>
