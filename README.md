@@ -1,8 +1,8 @@
 
 <h1 align="center"> # E9.ART  </h1>
 
-## Descrição do Projeto
-<p align="center">Tecnologias React + Vite </p>
+## Descrição do Projeto #Tecnologias React + Vit
+<p align="center">e </p>
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
