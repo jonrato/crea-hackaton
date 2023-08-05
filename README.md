@@ -5,8 +5,6 @@
 Tecnologias React + Vite
 </h2>
 
-
-
 <!--ts-->
    * [Sobre](#Sobre)
    * [Instalação](#instalacao)
@@ -20,7 +18,6 @@ Tecnologias React + Vite
 <h3 align="center">Sobre</h3>
 
 <p align=""> - O projeto tem objetivo melhorar a acessibilidade e diminuir o tempo que o usuário final demora para preencher o cadastro de ART. </p>
-<p align=""> - . </p>
 
 
 <h3 align="center">Instalacao</h3>
