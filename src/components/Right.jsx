@@ -23,6 +23,9 @@ const RightSection = () => {
       function redirect(){
         window.location.replace("/dashboard");
       }
+      function cadastrar(){
+        window.location.replace("/register");
+      }
 
       function entrar(e){
         e.preventDefault();
@@ -50,9 +53,9 @@ const RightSection = () => {
           <Form.Label>Senha</Form.Label>
           <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="password" placeholder="Digite seu CPF" />
         </Form.Group>
-        <a href="">
-        <button href="/register"> Cadastrar </button>
-        </a>
+        <br></br>
+        <a><p onClick={cadastrar} style={{cursor:'pointer'}}> Cadastrar </p></a>
+
         <Row className='d-flex align-items-center justify-content-center col-12'>
 
             <Button 
