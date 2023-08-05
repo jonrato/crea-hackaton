@@ -37,10 +37,10 @@ Tecnologias React + Vite
 <h3 align="center">Tecnologias </h3>
 
 <p align="">  - ReactJs + Vite no FrontEnd</p>
-- Firebase no Backend 
+<p align="">  - Firebase no Backend 
 <p> - Integração com API do ChatGpt</p>
 
 
-- Devido ao prazo curto pensamos em uma solução robusta e que fosse desenvolvida em pouco tempo.
-- 55K requests 1 day
+ Devido ao prazo curto pensamos em uma solução robusta e que fosse desenvolvida em pouco tempo.
+ 55K requests 1 day
 https://ibb.co/SKHM44R
