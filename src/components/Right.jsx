@@ -1,38 +1,47 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Form, Button, Row } from 'react-bootstrap';
-import { SiGoogle } from 'react-icons/si'; // Importe o ícone do Google
-import firebase from '../firebase';
-import auth from '../firebase'
-import googleProvider from "../firebase"
-
-
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
+//import { SiGoogle } from 'react-icons/si'; // Importe o ícone do Google
+//import firebase from '../firebase';
+//import auth from '../firebase'
+//import googleProvider from "../firebase";
+import { useState } from 'react';
+import { auth } from '../firebase';
 const RightSection = () => {
-    const handleGoogleSignIn = () => {
-        const provider = new auth.GoogleAuthProvider(); // Use 'auth' corretamente aqui
-        auth.signInWithPopup(provider)
-          .then((result) => {
-            // O usuário fez login com sucesso
-            const user = result.user;
-            console.log(user); // Exemplo de como exibir os dados do usuário no console
-          })
-          .catch((error) => {
-            // Ocorreu um erro durante o login
-            console.error('Erro durante o login:', error);
-          });
-      };
+
+  const [user, setUser] = useState("");
+  const [senha, setSenha] = useState("");
+
+    const [
+      signInWithEmailAndPassword,
+          usuarioLogado,
+          loading,
+          error
+      ] = useSignInWithEmailAndPassword(auth); 
+
+      function entrar(e){
+        e.preventDefault();
+        signInWithEmailAndPassword(user+"@creasp.com", senha).then((resultado) => {
+          setUser(resultado.user);
+          console.log(resultado);
+          alert("entrou" + JSON.stringify(resultado));
+
+    })
+
+  }
   return (
     <div className="left-section d-flex flex-column align-items-center justify-content-center">
         <h5>LOGIN</h5>
       <Form className="mt-4 col-md-6">
-        <Form.Group controlId="formBasicEmail">
+        <Form.Group>
           <Form.Label>CREA</Form.Label>
-          <Form.Control type="email" placeholder="Digite o número do seu CREA" />
+          <Form.Control onChange={e => setUser(e.target.value)} id="user" name="user" type="text" placeholder="Digite o número do seu CREA" />
         </Form.Group>
 
-        <Form.Group controlId="formBasicPassword">
+        <Form.Group>
           <Form.Label>CPF</Form.Label>
-          <Form.Control type="password" placeholder="Digite seu CPF" />
+          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite seu CPF" />
         </Form.Group>
         <a href="">
         <small>Esqueci a senha</small>
@@ -40,7 +49,7 @@ const RightSection = () => {
         <Row className='d-flex align-items-center justify-content-center col-12'>
 
             <Button 
-            type="submit" 
+            type="button" 
             className="mt-3 col-4 btn btn-info"
             style={{
                 // backgroundColor:"rgba(0,0,128,0.8)",
@@ -51,6 +60,8 @@ const RightSection = () => {
               Voltar
             </Button>
             <Button
+            onClick={entrar}
+            
             className='mt-3 col-4'
             style={{
                 backgroundColor:"rgba(0,0,128,0.8)",
@@ -77,3 +88,23 @@ const RightSection = () => {
 };
 
 export default RightSection;
+
+
+
+/*
+
+    const handleGoogleSignIn = () => {
+        const provider = new auth.GoogleAuthProvider(); // Use 'auth' corretamente aqui
+        auth.signInWithPopup(provider)
+          .then((result) => {
+            // O usuário fez login com sucesso
+            const user = result.user;
+            console.log(user); // Exemplo de como exibir os dados do usuário no console
+          })
+          .catch((error) => {
+            // Ocorreu um erro durante o login
+            console.error('Erro durante o login:', error);
+          });
+      };
+
+*/
