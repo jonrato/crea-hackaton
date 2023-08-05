@@ -8,7 +8,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 //import googleProvider from "../firebase";
 import { useState } from 'react';
 import { auth } from '../firebase';
-const RightSection = () => {
+const RightRegister = () => {
 
   const [user, setUser] = useState("");
   const [senha, setSenha] = useState("");
@@ -20,21 +20,14 @@ const RightSection = () => {
           error
       ] = useSignInWithEmailAndPassword(auth); 
 
-      function redirect(){
-        window.location.replace("/dashboard");
-      }
-
       function entrar(e){
         e.preventDefault();
         signInWithEmailAndPassword(user+"@creasp.com", senha).then((resultado) => {
           setUser(resultado.user);
           console.log(resultado);
-          if(JSON.stringify(resultado) != null){
-            window.location.replace("/dashboard");
-          }
+          alert("entrou" + JSON.stringify(resultado));
 
     })
-
 
   }
   return (
@@ -42,16 +35,32 @@ const RightSection = () => {
         <h5>LOGIN</h5>
       <Form className="mt-4 col-md-6">
         <Form.Group>
-          <Form.Label>CREA</Form.Label>
+          <Form.Label>Nome</Form.Label>
           <Form.Control onChange={e => setUser(e.target.value)} id="user" name="user" type="text" placeholder="Digite o número do seu CREA" />
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>Senha</Form.Label>
-          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="password" placeholder="Digite seu CPF" />
+          <Form.Label>Email</Form.Label>
+          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite seu CPF" />
         </Form.Group>
+
+        <Form.Group>
+          <Form.Label>Email</Form.Label>
+          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite seu CPF" />
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label>CPF</Form.Label>
+          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite seu CPF" />
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label>CPF</Form.Label>
+          <Form.Control onChange={e => setSenha(e.target.value)} id="senha" name="senha" type="text" placeholder="Digite seu CPF" />
+        </Form.Group>
+
         <a href="">
-        <button href="/register"> Cadastrar </button>
+        <small>Esqueci a senha</small>
         </a>
         <Row className='d-flex align-items-center justify-content-center col-12'>
 
@@ -62,17 +71,19 @@ const RightSection = () => {
                 // backgroundColor:"rgba(0,0,128,0.8)",
                 // border:'1px solid rgba(0,0,128,0.8)',
                 marginRight:'2rem'
-            }}
+            }} href="/"
             >
               Voltar
             </Button>
             <Button
             onClick={entrar}
+            
             className='mt-3 col-4'
             style={{
                 backgroundColor:"rgba(0,0,128,0.8)",
                 border:'1px solid rgba(0,0,128,0.8)'
             }}
+            href="/register"
             >
               Continuar
             </Button>
@@ -92,7 +103,7 @@ const RightSection = () => {
   );
 };
 
-export default RightSection;
+export default RightRegister;
 
 
 
