@@ -20,8 +20,8 @@ Tecnologias React + Vite
 <h3 align="center">Sobre</h3>
 
 <p align=""> O projeto tem objetivo melhorar a acessibilidade e diminuir o tempo que o usuário final demora para preencher o cadastro de ART. </p>
-<p align=""> ReactJs no FrontEnd</p>
-<p align=""> Firebase no Backend</p>
+<p align=""> - ReactJs no FrontEnd</p>
+<p align=""> - Firebase no Backend</p>
 
 <h3 align="center">Instalacao</h3>
 
