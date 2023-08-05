@@ -36,12 +36,10 @@ Tecnologias React + Vite
 
 <h3 align="center">Tecnologias </h3>
 
-<p align="">  - [@vitejs/plugin-react] ReactJs + Vite no FrontEnd</p>
+<p align="">  - ReactJs + Vite no FrontEnd</p>
 <p align=""> - Firebase no Backend </p>
 <p> - Integração com API do ChatGpt</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 - Devido ao prazo curto pensamos em uma solução robusta e que fosse desenvolvida em pouco tempo.
 - 55K requests 1 day
