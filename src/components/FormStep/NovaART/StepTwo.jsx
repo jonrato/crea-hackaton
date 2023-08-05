@@ -3,6 +3,23 @@ import React from 'react';
 import { Form, Row, Col } from 'react-bootstrap';
 
 const StepTwo = () => {
+
+  function cep(e){
+    const cep = e.target.value.replace(/\D/g,'');
+    fetch(`https://viacep.com.br/ws/${cep}/json/`, { method: 'GET' })
+    .then(res => res.json()).then(data => {
+      console.log(data);
+
+      var uf = document.getElementById('uf');
+      uf.value=data.uf;
+
+      var cidade = document.getElementById('cidade');
+      cidade.value=data.localidade;
+
+    })
+    //alert();
+  }
+
   return (
     <div style={{ border: '1px solid #ccc', borderRadius: '5px', padding: '10px' }}>
       <h5 style={{ border: '1px solid #ccc', borderRadius: '5px', padding: '10px', marginBottom: '20px' }}>
@@ -76,7 +93,7 @@ const StepTwo = () => {
         <Col>
           <Form.Group>
             <Form.Label>CEP</Form.Label>
-            <Form.Control type="text" />
+            <Form.Control onBlur={cep} type="text" />
           </Form.Group>
         </Col>
       </Row>
@@ -127,7 +144,7 @@ const StepTwo = () => {
         <Col>
           <Form.Group>
             <Form.Label>Estado/UF</Form.Label>
-            <Form.Control type="text" />
+            <Form.Control id="uf" type="text" />
           </Form.Group>
         </Col>
       </Row>
@@ -136,7 +153,7 @@ const StepTwo = () => {
         <Col>
           <Form.Group>
             <Form.Label>Cidade</Form.Label>
-            <Form.Control type="text" />
+            <Form.Control id="cidade" type="text" />
           </Form.Group>
         </Col>
       </Row>
