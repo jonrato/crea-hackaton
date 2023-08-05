@@ -56,7 +56,7 @@ const RightSection = () => {
                 backgroundColor:"rgba(0,0,128,0.8)",
                 border:'1px solid rgba(0,0,128,0.8)'
             }}
-            href="/register"
+            href="/dashboard"
             >
               Continuar
             </Button>
