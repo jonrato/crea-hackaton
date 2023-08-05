@@ -8,6 +8,8 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 - Firebase Auth - https://firebase.google.com/?authuser=1&hl=pt-br
 - Firestore Banco da dados -
-- Login:creahackathon@gmail.com  Senha:
+- Login:creahackathon@gmail.com  Senha: cr3@hackathon
 
-![googledb](https://github.com/jonrato/crea-hackaton/assets/56514877/369ad236-6cc9-4218-a653-dfbf9223f1f5)
+
+![googledb](https://github.com/jonrato/crea-hackaton/assets/56514877/f3494204-4a6c-4d3c-acfd-faa1c8f3f474)
+Acessos por dia Gratis
