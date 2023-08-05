@@ -1,21 +1,48 @@
-# E9.ART
 
-# Install Dependencies:
-`npm install`
+<h1 align="center">  E9.ART  </h1>
 
-# Execute Project:
-`npm run dev`
+<h2 align="center">
+Tecnologias React + Vite
+</h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!--ts-->
+   * [Sobre](#Sobre)
+   * [Instalação](#instalacao)
+   * [Como usar](#como-usar)
+      * [Pre Requisitos](#pre-requisitos)
+      * [Local files](#local-files)
+   * [Tecnologias](#tecnologias)
+     
+<!--te-->
 
-Currently, two official plugins are available:
+<h3 align="center">Sobre</h3>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-- Firebase Auth - https://firebase.google.com/?authuser=1&hl=pt-br
-- Firestore Banco da dados -
-- Login:creahackathon@gmail.com  Senha: cr3@hackathon
+<p align=""> - O projeto tem objetivo melhorar a acessibilidade e diminuir o tempo que o usuário final demora para preencher o cadastro de ART. </p>
 
 
-![googledb](https://github.com/jonrato/crea-hackaton/assets/56514877/f3494204-4a6c-4d3c-acfd-faa1c8f3f474)
-Acessos por dia Gratis
+<h3 align="center">Instalacao</h3>
+
+<p align=""> - git clone https://github.com/jonrato/crea-hackaton.git  </p>
+<p align=""> - npm install </p>
+<p align=""> - npm run dev </p>
+
+<h3 align="center">Pre Requisitos</h3>
+
+<p align=""> - Git + GitHub
+<p align=""> - Node Instalado
+
+
+<h3 align="center">Tecnologias </h3>
+
+<p align="">  - ReactJs + Vite no FrontEnd</p>
+<p align="">  - Firebase no Backend 
+<p> - Integração com API do ChatGpt</p>
+
+
+<br></br>
+
+ Devido ao prazo curto pensamos em uma solução robusta e que fosse desenvolvida em pouco tempo.
+ 55K requests 1 day
+https://ibb.co/SKHM44R
+
+Backend Branch Main/Firebase
