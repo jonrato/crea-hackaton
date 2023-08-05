@@ -5,12 +5,13 @@ import iconarts from "../images/ic-arts.png";
 import iconservicos from "../images/ic-servicos.png";
 import iconatendimentos from "../images/ic-atendimentos.png";
 import iconmanutencao from "../images/ic-manutencao.png";
+import homeicon from "../images/home-icon.png"
 
 
 const Sidebar = ({ handlePageChange }) => {
     // Array de objetos para representar os botões navegáveis
     const navButtons = [
-        {icon: iconanuidade, text: 'Home', page: 'Home', router:'/dashboard' },
+        {icon: homeicon, text: 'Home', page: 'Home', router:'/dashboard' },
         {icon: iconanuidade, text: 'Anuidade', page: 'Anuidade', router:'/dashboard' },
         {icon: iconarts, text: 'ARTs', page: 'ARTs', router:'/arts' },
         {icon: iconservicos, text: 'Serviços', page: 'Serviços', router:'/dashboard' },
@@ -32,17 +33,22 @@ const Sidebar = ({ handlePageChange }) => {
             
             <div 
             key={index} 
-            className='d-flex m-2 text-center bg bg-warning text-black align-items-center justify-content-center'
+            className='d-flex m-2 text-center bg bg-warning text-black align-items-center '
             onClick={() => handlePageChange(button.page)}
             >
-              <img 
+              <img
+              className="col-6"
               src={button.icon}
-              style={{width:'2.5rem', marginTop:'0.8rem'}}
+              style={{width:'3rem', marginTop:'0.8rem'}}
               />
             <a href={button.router}>
               <small
                 className="col-9 font-weight-bold"
-                style={{marginTop:'0.8rem'}}
+                style={{
+                  marginTop:'0.8rem', 
+                  color:'black',
+                  marginLeft:'1rem'
+                }}
                 >
               {button.text}
               </small>
