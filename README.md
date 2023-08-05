@@ -31,8 +31,8 @@ Tecnologias React + Vite
 
 <h3 align="center">Pre Requisitos</h3>
 
-<p align=""> Git + GitHub
-<p align=""> Node Instalado
+<p align=""> - Git + GitHub
+<p align=""> - Node Instalado
 
 
 <h3 align="center">Tecnologias </h3>
